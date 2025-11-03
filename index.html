@@ -12,10 +12,27 @@
   <!-- Header -->
   <header class="bg-blue-600 text-white py-6 shadow-md">
     <div class="container mx-auto px-6 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-yellow-400">Mercado Bom Retorno</h1>
-      <a href="#contato" class="bg-yellow-400 text-blue-800 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-300 transition">Contato</a>
+      <div class="flex items-center space-x-3">
+        <img src="imagens/mercadobomretorno.jpg" alt="Logo Mercado Bom Retorno" class="w-18 h-12 rounded-full border-2 border-yellow-400 shadow-md">
+        <h1 class="text-2xl font-bold text-yellow-400">Mercado Bom Retorno</h1>
+      </div>
+      <a href="#contato" class="bg-yellow-400 text-blue-800 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-300 transition">
+        Contato
+      </a>
     </div>
   </header>
+
+  <!-- Nav -->
+  <nav class="bg-yellow-300 py-4 shadow-md">
+    <div class="container mx-auto px-6 flex flex-wrap justify-center gap-4">
+      <button onclick="filtrarProdutos('todos')" class="bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition">Todos</button>
+      <button onclick="filtrarProdutos('mercearia')" class="bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition">Mercearia</button>
+      <button onclick="filtrarProdutos('bebidas')" class="bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition">Bebidas</button>
+      <button onclick="filtrarProdutos('limpeza')" class="bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition">Produtos de Limpeza</button>
+      <button onclick="filtrarProdutos('acougue')" class="bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition">Açougue</button>
+      <button onclick="filtrarProdutos('utilidades')" class="bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition">Utilidades</button>
+    </div>
+  </nav>
 
   <!-- Hero -->
   <section class="bg-yellow-100 py-16 text-center">
@@ -28,60 +45,83 @@
   <section id="produtos" class="py-16 container mx-auto px-6">
     <h3 class="text-3xl font-bold text-center text-blue-700 mb-8">Produtos em destaque</h3>
 
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- Produto 1 -->
-      <div class="bg-white shadow-lg rounded-2xl overflow-hidden hover:scale-105 transition">
+    <div id="lista-produtos" class="grid md:grid-cols-3 gap-8">
+
+      <!-- =================== MERCEARIA =================== -->
+      <div class="produto bg-white shadow-lg rounded-2xl overflow-hidden hover:scale-105 transition" data-categoria="mercearia">
         <img src="imagens/leiteninho.jpg" alt="Leite Ninho" class="w-full h-48 object-contain p-6">
         <div class="p-4 text-center">
-          <h4 class="text-xl font-bold text-blue-700">Leite Ninho</h4>
-          <p class="text-gray-600 mt-2">R$ 5,99 a unidade</p>
+          <h4 class="text-xl font-bold text-blue-700">Leite Ninho 400g</h4>
+          <p class="text-gray-600 mt-2">R$ 5,99</p>
         </div>
       </div>
-      
-      <!-- Produto 2 -->
-      <div class="bg-white shadow-lg rounded-2xl overflow-hidden hover:scale-105 transition">
+
+      <div class="produto bg-white shadow-lg rounded-2xl overflow-hidden hover:scale-105 transition" data-categoria="mercearia">
         <img src="imagens/arroz.jpg" alt="Arroz" class="w-full h-48 object-contain p-6">
         <div class="p-4 text-center">
-          <h4 class="text-xl font-bold text-blue-700">Arroz</h4>
-          <p class="text-gray-600 mt-2">Arroz branco e integral com preços acessíveis.</p>
+          <h4 class="text-xl font-bold text-blue-700">Arroz Tio João 5Kg</h4>
+          <p class="text-gray-600 mt-2">R$ 24,99</p>
         </div>
       </div>
 
-      <!-- Produto 3 -->
-      <div class="bg-white shadow-lg rounded-2xl overflow-hidden hover:scale-105 transition">
-        <img src="imagens/leite.jpg" alt="Leite" class="w-full h-48 object-contain p-6">
-        <div class="p-4 text-center">
-          <h4 class="text-xl font-bold text-blue-700">Leite</h4>
-          <p class="text-gray-600 mt-2">Leite integral e desnatado de qualidade.</p>
-        </div>
-      </div>
-
-      <!-- Produto 4 -->
-      <div class="bg-white shadow-lg rounded-2xl overflow-hidden hover:scale-105 transition">
-        <img src="imagens/feijao.jpg" alt="Feijão" class="w-full h-48 object-contain p-6">
-        <div class="p-4 text-center">
-          <h4 class="text-xl font-bold text-blue-700">Feijão</h4>
-          <p class="text-gray-600 mt-2">Feijão carioca e preto sempre fresquinho.</p>
-        </div>
-      </div>
-
-      <!-- Produto 5 -->
-      <div class="bg-white shadow-lg rounded-2xl overflow-hidden hover:scale-105 transition">
+      <!-- =================== BEBIDAS =================== -->
+      <div class="produto bg-white shadow-lg rounded-2xl overflow-hidden hover:scale-105 transition" data-categoria="bebidas">
         <img src="imagens/coca-cola.jpg" alt="Coca-Cola" class="w-full h-48 object-contain p-6">
         <div class="p-4 text-center">
-          <h4 class="text-xl font-bold text-blue-700">Coca-Cola</h4>
-          <p class="text-gray-600 mt-2">Refrigerantes e bebidas geladas.</p>
+          <h4 class="text-xl font-bold text-blue-700">Coca-Cola 2L</h4>
+          <p class="text-gray-600 mt-2">R$ 8,99</p>
         </div>
       </div>
 
-      <!-- Produto 6 -->
-      <div class="bg-white shadow-lg rounded-2xl overflow-hidden hover:scale-105 transition">
-        <img src="imagens/sabao-em-po.jpg" alt="Sabão em pó" class="w-full h-48 object-contain p-6">
+      <div class="produto bg-white shadow-lg rounded-2xl overflow-hidden hover:scale-105 transition" data-categoria="bebidas">
+        <img src="imagens/agua.jpg" alt="Água Mineral" class="w-full h-48 object-contain p-6">
         <div class="p-4 text-center">
-          <h4 class="text-xl font-bold text-blue-700">Sabão em Pó</h4>
-          <p class="text-gray-600 mt-2">As melhores marcas para deixar suas roupas limpas.</p>
+          <h4 class="text-xl font-bold text-blue-700">Água Mineral 1,5L</h4>
+          <p class="text-gray-600 mt-2">R$ 2,50</p>
         </div>
       </div>
+
+      <!-- =================== LIMPEZA =================== -->
+      <div class="produto bg-white shadow-lg rounded-2xl overflow-hidden hover:scale-105 transition" data-categoria="limpeza">
+        <img src="imagens/tixanype.jpg" alt="Sabão em pó Tixan Ype" class="w-full h-48 object-contain p-6">
+        <div class="p-4 text-center">
+          <h4 class="text-xl font-bold text-blue-700">Sabão em Pó Tixan Ypê 1,6Kg</h4>
+          <p class="text-gray-600 mt-2">R$ 25,99</p>
+        </div>
+      </div>
+
+      <div class="produto bg-white shadow-lg rounded-2xl overflow-hidden hover:scale-105 transition" data-categoria="limpeza">
+        <img src="imagens/desinfetantepinhosol.webp" alt="Desinfetante" class="w-full h-48 object-contain p-6">
+        <div class="p-4 text-center">
+          <h4 class="text-xl font-bold text-blue-700">Desinfetante Pinho Sol 500ml</h4>
+          <p class="text-gray-600 mt-2">R$ 7,49</p>
+        </div>
+      </div>
+
+      <!-- =================== AÇOUGUE =================== -->
+      <div class="produto bg-white shadow-lg rounded-2xl overflow-hidden hover:scale-105 transition" data-categoria="acougue">
+        <img src="imagens/picanha.jpg" alt="Picanha Bovina" class="w-full h-48 object-contain p-6">
+        <div class="p-4 text-center">
+          <h4 class="text-xl font-bold text-blue-700">Picanha Bovina</h4>
+          <p class="text-gray-600 mt-2">R$ 49,90/kg</p>
+        </div>
+      </div>
+      <div class="produto bg-white shadow-lg rounded-2xl overflow-hidden hover:scale-105 transition" data-categoria="acougue">
+        <img src="imagens/picanha.jpg" alt="Filé de Frango" class="w-full h-48 object-contain p-6">
+        <div class="p-4 text-center">
+          <h4 class="text-xl font-bold text-blue-700">Filé de frango</h4>
+          <p class="text-gray-600 mt-2">R$ 23,90/kg</p>
+        </div>
+      </div>
+      <!-- =================== UTILIDADES =================== -->
+      <div class="produto bg-white shadow-lg rounded-2xl overflow-hidden hover:scale-105 transition" data-categoria="utilidades">
+        <img src="imagens/esponja.jpg" alt="Esponja Multiuso" class="w-full h-48 object-contain p-6">
+        <div class="p-4 text-center">
+          <h4 class="text-xl font-bold text-blue-700">Esponja Multiuso</h4>
+          <p class="text-gray-600 mt-2">R$ 1,99</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -100,6 +140,20 @@
   <footer class="bg-blue-800 text-yellow-400 text-center py-6">
     <p>&copy; 2025 Mercado Bom Retorno. Todos os direitos reservados.</p>
   </footer>
+
+  <!-- Script de Filtro -->
+  <script>
+    function filtrarProdutos(categoria) {
+      const produtos = document.querySelectorAll('.produto');
+      produtos.forEach(produto => {
+        if (categoria === 'todos' || produto.dataset.categoria === categoria) {
+          produto.style.display = 'block';
+        } else {
+          produto.style.display = 'none';
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>
