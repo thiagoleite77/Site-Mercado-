@@ -1,0 +1,6 @@
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Ofertas fresquinhas todos os dias!</h2>
+    <p>Açougue, padaria, mercearia e muito mais perto de você.</p>
+    <a href="#produtos" class="btn-produtos">Ver produtos</a>
+  </section>

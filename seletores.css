@@ -1,0 +1,256 @@
+/* === Reset básico === */
+body {
+  background-color: #ffffff;
+  color: #1f2937;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* Adicionando imagem de fundo com sobreposição azul */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('imagens/frentemercado.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3; /* Transparência da imagem */
+  z-index: -1;
+}
+
+/* Adicionando sobreposição azul */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(37, 99, 235, 0.2); /* Azul com transparência */
+  z-index: -1;
+}
+
+/* === HEADER === */
+header {
+  background-color: #2563eb;
+  color: white;
+  padding: 1.5rem 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header-logo img {
+  width: 160px;
+  height: 105px;
+  border-radius: 9999px;
+  border: 2px solid #2563eb;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+}
+
+.header-logo h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.btn-contato {
+  background-color: #facc15;
+  color: #1e3a8a;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-contato:hover {
+  background-color: #fde047;
+}
+
+/* === NAV === */
+nav {
+  background-color: #fd4747;
+  padding: 1rem 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.nav-container button {
+  background-color: #1e40af;
+  color: rgb(255, 255, 255);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.nav-container button:hover {
+  background-color: #1d4ed8;
+}
+
+/* === HERO === */
+.hero {
+  background-color: #daca17;
+  text-align: center;
+  padding: 4rem 1px;
+}
+
+.hero h2 {
+  color: #1d4ed8;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.hero p {
+  color: #374151;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.btn-produtos {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-produtos:hover {
+  background-color: #1e40af;
+}
+
+/* === PRODUTOS === */
+.produtos-section {
+  padding: 4rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.produtos-section h3 {
+  text-align: center;
+  color: #1d4ed8;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.produto {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.produto:hover {
+  transform: scale(1.05);
+}
+
+.produto img {
+  width: 100%;
+  height: 190px;
+  object-fit: contain;
+  padding: 1rem;
+}
+
+.produto h4 {
+  color: #1d4ed8;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.produto p {
+  color: #4b5563;
+  margin-top: 0.5rem;
+}
+
+/* === CONTATO === */
+.contato {
+  background-color: #2563eb;
+  color: white;
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.contato h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.contato p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn-whatsapp {
+  background-color: #00ff11;
+  color: #1e3a8a;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-whatsapp:hover {
+  background-color: #fde047;
+}
+
+.link-mapa {
+  display: block;
+  color: #fde047;
+  margin-top: 1rem;
+  text-decoration: underline;
+}
+
+/* === FOOTER === */
+footer {
+  background-color: #1e3a8a;
+  color: #facc15;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.95rem;
+}
